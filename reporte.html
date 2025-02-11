@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/Logo.jpeg" alt="Logo Vodafone" class="logo">
+        <h1>Reporte de Ventas</h1>
+        <div class="total">
+            <span>Total: </span>
+            <span id="total-price">$0.00</span>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="https://clubredteam.com/login">Club Red Team</a></li>
+                    <li><a href="https://manuales.vodafone.es/">Guias Moviles</a></li>
+                    <li><a href="https://www.vodafone.es/c/particulares/es/">Vodafone.es</a></li>
+                    <li><a href="https://offers.vodafone.com/">Vodafone Entretenimiento</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            
+            <form id="reporte-form">
+                <label for="client-id">ID del Cliente:</label>
+                <div class="input-container">
+                    <input type="text" id="client-id" name="client-id" required>
+                    <img src="img/Logo.jpeg" alt="Ícono" class="input-icon"> <!-- Icono junto al ID del cliente -->
+                </div>
+            
+                <label for="work-order">Orden de Trabajo:</label>
+                <div class="input-container">
+                    <input type="text" id="work-order" name="work-order" required>
+                    <img src="img/Logo.jpeg" alt="Ícono" class="input-icon"> <!-- Icono junto a la orden de trabajo -->
+                </div>
+            
+                <label for="sale-date">Fecha de Venta:</label>
+                <input type="date" id="sale-date" name="sale-date" required> <!-- Campo de fecha -->
+            
+                <label for="service">Servicio:</label>
+                <select id="service" name="service" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Fibra 600 Megas" data-price="12.453">Fibra 600 Megas</option>
+                    <option value="Fibra 1Gb" data-price="23.675">Fibra 1Gb</option>
+                    <option value="Pack Tv" data-price="5.101">Pack Tv</option>
+                    <option value="Terminal" data-price="4.954">Terminal</option>
+                    <option value="Vf Care" data-price="3.855">Vf Care</option>
+                    <option value="Deco 4k Pro" data-price="4.958">Deco 4k Pro</option>
+                    <option value="Super Wifi 6" data-price="8.752">Super Wifi 6</option>
+                </select>
+            
+                <button type="button" id="add-entry">Ingresar</button>
+            </form>
+            
+            <table id="report-table">
+                <thead>
+                    <tr>
+                        <th>ID Cliente</th>
+                        <th>Orden de Trabajo</th>
+                        <th>Fecha de Venta</th> <!-- Nueva columna para la fecha -->
+                        <th>Servicio</th>
+                        <th>Precio</th>
+                        <th>Acciones</th> <!-- Columna para eliminar -->
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            
+            <!-- Botones dentro del contenedor principal -->
+            <div class="buttons-container">
+                <button id="export-csv">Exportar a CSV</button>
+                <button id="theme-switch">Cambiar Tema</button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Enlaces de fuentes externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
